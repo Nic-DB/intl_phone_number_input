@@ -422,6 +422,7 @@ class _InputWidgetView
           ],
           Flexible(
             child: TextFormField(
+              enableInteractiveSelection: false,
               key: widget.fieldKey ?? Key(TestHelper.TextInputKeyValue),
               textDirection: TextDirection.ltr,
               controller: state.controller,
