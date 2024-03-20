@@ -62,6 +62,7 @@ class InternationalPhoneNumberInput extends StatefulWidget {
   final int maxLength;
 
   final bool isEnabled;
+  final bool isTextFieldEnabled;
   final bool formatInput;
   final bool autoFocus;
   final bool autoFocusSearch;
@@ -89,6 +90,7 @@ class InternationalPhoneNumberInput extends StatefulWidget {
   InternationalPhoneNumberInput(
       {Key? key,
       this.selectorConfig = const SelectorConfig(),
+      this.isTextFieldEnabled = true,
       required this.onInputChanged,
       this.onInputValidated,
       this.onSubmit,
@@ -425,7 +427,7 @@ class _InputWidgetView
               controller: state.controller,
               cursorColor: widget.cursorColor,
               focusNode: widget.focusNode,
-              enabled: widget.isEnabled,
+              enabled: widget.isTextFieldEnabled,
               autofocus: widget.autoFocus,
               keyboardType: widget.keyboardType,
               textInputAction: widget.keyboardAction,
